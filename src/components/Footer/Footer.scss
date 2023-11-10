@@ -1,26 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-.header{
+.footer{
     background: var(--headfoot-color);
-    height: 70px;
+    height: 50px;
     font-family: Poppins;
     font-weight: 600;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 
-.header {
+.footer {
     button {
-    font-size: 25px;
+    font-size: 20px;
     border: none;
     font-family: Poppins;
     font-weight: 600;
     border: 10px;
-    padding: 10px;
+    padding: 5px;
 
     color: var(--primary-text-color);
     background: var(--headfoot-color);
-    margin-left: 35px;
-    margin-top: 12px;
+    margin-top: 5px;
+    margin-left: 5px;
     }
     
     button:focus {

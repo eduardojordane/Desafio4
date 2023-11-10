@@ -1,9 +1,15 @@
 import React from 'react'
 import './Header.scss'
+import '../../global.scss'
+import {useState} from 'react';
+
 
 const Header = () => {
+
+  const [isBright, setisBright] = useState(false)
+
   return (
-    <div className="header">
+    <div className="header" bright-theme={isBright ? "bright" : "dark"}>
         <button>Organização</button>
         <button>Tarefas</button>
     </div>

@@ -1,12 +1,14 @@
 import React from 'react';
 import Modal from 'react-modal';
 import './Router.scss';
+import '../../global.scss'
 import {useState} from 'react';
 import Pencil from '../../images/pencil.svg'
 import Trash from '../../images/trash.svg'
 
 
-const Router = () => {
+
+const Router = ({isBright}) => {
   const db = [
     { "id": 0, "title": "Exercicios", "description": "Ir para academia fazer exercicios", "completed": true },
     { "id": 1, "title": "Limpar o carro", "description": "Limpar o carro inteiro, de dentro pra fora", "completed": false },
@@ -91,8 +93,9 @@ const addNewTask = () => {
     }
   };
 
+
  return (
-    <div className="Tasks">
+    <div className="Tasks" bright-theme={isBright ? "bright" : "dark"}>
       <h1>Otimize seu tempo e se organize com o nosso Planejador Diário.</h1>
       <table>
         <thead>
@@ -109,7 +112,7 @@ const addNewTask = () => {
             return (
               <tr key={task.id}>
                 <td className="tooltip">{task.title}<span className="tooltiptext">{task.description}</span></td>
-                <td className="StatusOpcoesAlign">
+                <td className="StatusOpcoesAlign" >
                   <input
                     type="checkbox"
                     label="statusbox"
@@ -120,7 +123,7 @@ const addNewTask = () => {
                     onChange={() => mudarEstado(task.id)}
                   />
                 </td>
-                <td className="StatusOpcoesAlign">
+                <td className="StatusOpcoesAlign" >
                   <button onClick={() => openModal(task)}><img src={Pencil} alt="Editar"/></button>
                   <button onClick={() => removeItem(task.id)}><img src={Trash} alt="Remover"/></button>
                 </td>

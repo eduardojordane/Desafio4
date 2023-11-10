@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+*{
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    transition: background-color 250ms ease-in-out
+}
 
 .Tasks{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
     align-items: center;
     font-family: Raleway;
+    color: var(--primary-text-color);
+    height: 91vh;
 }
 
 h1{
@@ -27,7 +34,7 @@ hr{
     margin: 20px 0px;
     width: 280%;
     height: 3px;
-    background-color: white;
+    background-color: var(--primary-text-color);
 }
 
 td{
@@ -50,7 +57,7 @@ input[type=checkbox]:not(:checked) {
     height: 12.986px;
     margin: 0px;
     padding: 0px;
-    outline: 1px white solid;  
+    outline: 1px var(--primary-text-color) solid;  
 }
 
 input[type=checkbox]:checked {
@@ -64,7 +71,7 @@ input[type=checkbox]:checked {
     visibility: hidden;
     width: max-content;
     background-color: rgba(15, 15, 15, 0.8);
-    color: #fff;
+    color: var(--primary-text-color);
     text-align: center;
     border-radius: 6px;
     padding: 2px 5px;
@@ -142,13 +149,13 @@ button:active{
 
 .Modal button:hover{
     background-color: #0C70F2;
-    color: white;
+    color: var(--primary-text-color);
     border: 1px;
 }
 
 
 #addButton{
-    color: white;
+    color: var(--primary-text-color);
     font-size: 20px;
     margin-left: 115px;
 }
