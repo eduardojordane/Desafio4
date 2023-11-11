@@ -3,8 +3,12 @@ import Modal from 'react-modal';
 import './Router.scss';
 import '../../global.scss'
 import {useState} from 'react';
-import Pencil from '../../images/pencil.svg'
-import Trash from '../../images/trash.svg'
+
+import TrashDark from '../../images/trash-dark.png'
+import TrashBright from '../../images/trash-bright.png'
+
+import PencilBright from '../../images/pencil-bright.png';
+import PencilDark from '../../images/pencil-dark.png';
 
 
 
@@ -94,6 +98,15 @@ const addNewTask = () => {
   };
 
 
+const getPencilImage = () => {
+    return isBright ? PencilDark : PencilBright;
+  };
+
+const getTrashImage = () => {
+    return isBright ? TrashBright : TrashDark;
+  };
+
+
  return (
     <div className="Tasks" bright-theme={isBright ? "bright" : "dark"}>
       <h1>Otimize seu tempo e se organize com o nosso Planejador Diário.</h1>
@@ -123,9 +136,9 @@ const addNewTask = () => {
                     onChange={() => mudarEstado(task.id)}
                   />
                 </td>
-                <td className="StatusOpcoesAlign" >
-                  <button onClick={() => openModal(task)}><img src={Pencil} alt="Editar"/></button>
-                  <button onClick={() => removeItem(task.id)}><img src={Trash} alt="Remover"/></button>
+                <td className="StatusOpcoesAlign">
+                  <button onClick={() => openModal(task)}><img src={getPencilImage()} width='25px' height="25px" alt="Editar"/></button>
+                  <button onClick={() => removeItem(task.id)}><img src={getTrashImage()} width='25px' height="25px" alt="Remover"/></button>
                 </td>
               </tr>
             );
@@ -145,6 +158,7 @@ const addNewTask = () => {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         className = "Modal"
+
       >
         <p>Deseja editar esse item?</p>
         <input

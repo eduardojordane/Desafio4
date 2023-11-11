@@ -5,7 +5,6 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Toggle from './components/Toggle/Toggle';
 
-//Linha de teste
 
 function App() {
   const [isBright, setisBright] = useState(false)
@@ -17,7 +16,7 @@ function App() {
         isChecked={isBright}
         handleChange={() => setisBright(!isBright)}
       />
-      <Router />
+      <Router isBright={isBright}/>
       <Footer />
     </div>
   );

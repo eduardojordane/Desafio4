@@ -13,7 +13,6 @@
 
     align-items: center;
     font-family: Raleway;
-    color: var(--primary-text-color);
     height: 91vh;
 }
 
@@ -70,8 +69,7 @@ input[type=checkbox]:checked {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: max-content;
-    background-color: rgba(15, 15, 15, 0.8);
-    color: var(--primary-text-color);
+
     text-align: center;
     border-radius: 6px;
     padding: 2px 5px;
@@ -98,7 +96,6 @@ button:hover{
 }
 
 button:active{
-    background: rgba(255, 255, 255, 0.082);
     border-radius: 10px;
 }
 
@@ -115,8 +112,8 @@ button:active{
     height: 300px;
     border-radius: 5px;
 
-    background-color: #fff;
     font-family: Raleway;
+    
 }
 
 .Modal p{
@@ -124,7 +121,6 @@ button:active{
     font-weight: 600;
     line-height: 41px;
     text-align: center;
-    color: black;
     margin-top: 50px;
 }
 
@@ -148,14 +144,12 @@ button:active{
 }
 
 .Modal button:hover{
-    background-color: #0C70F2;
-    color: var(--primary-text-color);
+    background-color: var(--headfoot-color);
     border: 1px;
 }
 
 
 #addButton{
-    color: var(--primary-text-color);
     font-size: 20px;
     margin-left: 115px;
 }
