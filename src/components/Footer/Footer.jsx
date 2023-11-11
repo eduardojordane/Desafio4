@@ -6,9 +6,7 @@ const Footer = () => {
 
   return (
     <div className="footer">    
-        <button>Fonte</button>
-        <button>PDF</button>
-        <button>Excel</button>
+        
     </div>
   )
 }

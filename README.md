@@ -13,9 +13,11 @@
 
 Aplicação desenvolvida para listar e visualizar tarefas, com o objetivo de colocar em práticas a biblioteca de desenvolvimento de interfaces React JS.
 
-Projeto do DESAFIO 3 da formação em Tecnologia da DNC.
+Projeto do DESAFIO 4 da formação em Tecnologia da DNC.
 
 Baseado no design informado no Figma: https://www.figma.com/file/yFT1qGLCqFZ636EhVfmuEd/Untitled?type=design&node-id=1-2&mode=design&t=xzBTTGN897cmLeWI-0 , devemos criar nosso próprio projeto com o máximo de fidelidade à proposta original.
+
+Essa é uma versão modificada do DESAFIO 3. Nesta versão há a possibilidade de alterar o modo de exibição entre claro e escuro.
 
 <hr>
 
